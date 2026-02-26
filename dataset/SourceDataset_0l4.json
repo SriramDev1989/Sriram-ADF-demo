@@ -1,0 +1,418 @@
+{
+	"name": "SourceDataset_0l4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobToAzureSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "properties.csv",
+				"folderPath": "Yardi",
+				"container": "reit"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "HMY",
+				"type": "String"
+			},
+			{
+				"name": "SCODE",
+				"type": "String"
+			},
+			{
+				"name": "SADDR1",
+				"type": "String"
+			},
+			{
+				"name": "SADDR2",
+				"type": "String"
+			},
+			{
+				"name": "SADDR3",
+				"type": "String"
+			},
+			{
+				"name": "SADDR4",
+				"type": "String"
+			},
+			{
+				"name": "SCITY",
+				"type": "String"
+			},
+			{
+				"name": "SSTATE",
+				"type": "String"
+			},
+			{
+				"name": "SZIPCODE",
+				"type": "String"
+			},
+			{
+				"name": "ITYPE",
+				"type": "String"
+			},
+			{
+				"name": "BINACTIVE",
+				"type": "String"
+			},
+			{
+				"name": "HTAX",
+				"type": "String"
+			},
+			{
+				"name": "HUSUALACCT",
+				"type": "String"
+			},
+			{
+				"name": "IENTTYPE",
+				"type": "String"
+			},
+			{
+				"name": "SEXTRAADDRLINE",
+				"type": "String"
+			},
+			{
+				"name": "FSALESTAX",
+				"type": "String"
+			},
+			{
+				"name": "ILATETYPE",
+				"type": "String"
+			},
+			{
+				"name": "DLATEPERCENT",
+				"type": "String"
+			},
+			{
+				"name": "SLATEMIN",
+				"type": "String"
+			},
+			{
+				"name": "SLATEPERDAY",
+				"type": "String"
+			},
+			{
+				"name": "BCOMMTYPE",
+				"type": "String"
+			},
+			{
+				"name": "DCOMMAMT",
+				"type": "String"
+			},
+			{
+				"name": "SCOMMMIN",
+				"type": "String"
+			},
+			{
+				"name": "BCOMMPOSTED",
+				"type": "String"
+			},
+			{
+				"name": "SCOMMPOSTEDAMT",
+				"type": "String"
+			},
+			{
+				"name": "SCASHRESERVE",
+				"type": "String"
+			},
+			{
+				"name": "DTMGMTDATE",
+				"type": "String"
+			},
+			{
+				"name": "IENDOFYEAR",
+				"type": "String"
+			},
+			{
+				"name": "BEXCLUDE",
+				"type": "String"
+			},
+			{
+				"name": "BACCRUAL",
+				"type": "String"
+			},
+			{
+				"name": "BSITE",
+				"type": "String"
+			},
+			{
+				"name": "BASSOCIATION",
+				"type": "String"
+			},
+			{
+				"name": "IPROPTYPE",
+				"type": "String"
+			},
+			{
+				"name": "SMAINTLIMIT",
+				"type": "String"
+			},
+			{
+				"name": "DWOCOMM",
+				"type": "String"
+			},
+			{
+				"name": "IPORTFOLIO",
+				"type": "String"
+			},
+			{
+				"name": "DPPRICE",
+				"type": "String"
+			},
+			{
+				"name": "ITYPERES",
+				"type": "String"
+			},
+			{
+				"name": "SNCREIF",
+				"type": "String"
+			},
+			{
+				"name": "HIDEALLEASE",
+				"type": "String"
+			},
+			{
+				"name": "IRERENT",
+				"type": "String"
+			},
+			{
+				"name": "SACQUIRE",
+				"type": "String"
+			},
+			{
+				"name": "SDISPOSE",
+				"type": "String"
+			},
+			{
+				"name": "HPAYER",
+				"type": "String"
+			},
+			{
+				"name": "DGSTRATE",
+				"type": "String"
+			},
+			{
+				"name": "HPROPSTORAGE",
+				"type": "String"
+			},
+			{
+				"name": "HMVENDOR",
+				"type": "String"
+			},
+			{
+				"name": "CNSFFEE",
+				"type": "String"
+			},
+			{
+				"name": "HNSFCHGCODE",
+				"type": "String"
+			},
+			{
+				"name": "SPROPSTORATTN",
+				"type": "String"
+			},
+			{
+				"name": "HCOUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "IPROPREPORTINGTYPE",
+				"type": "String"
+			},
+			{
+				"name": "DTSTAMP",
+				"type": "String"
+			},
+			{
+				"name": "SPERIOD",
+				"type": "String"
+			},
+			{
+				"name": "DTINACTIVE",
+				"type": "String"
+			},
+			{
+				"name": "HLEGALENTITY",
+				"type": "String"
+			},
+			{
+				"name": "SHMPROJECTTYPE",
+				"type": "String"
+			},
+			{
+				"name": "IUNITTYPES",
+				"type": "String"
+			},
+			{
+				"name": "ITYPECOMMERCIAL",
+				"type": "String"
+			},
+			{
+				"name": "ITYPECONDO",
+				"type": "String"
+			},
+			{
+				"name": "ITYPESTUDENT",
+				"type": "String"
+			},
+			{
+				"name": "ITYPESENIOR",
+				"type": "String"
+			},
+			{
+				"name": "ITYPEMILITARY",
+				"type": "String"
+			},
+			{
+				"name": "ITYPEAFFORDABLE",
+				"type": "String"
+			},
+			{
+				"name": "ITYPEPUBLICHOUSING",
+				"type": "String"
+			},
+			{
+				"name": "ITYPECOOP",
+				"type": "String"
+			},
+			{
+				"name": "ITYPEASSOCIATION",
+				"type": "String"
+			},
+			{
+				"name": "ISUBTYPEASSOC",
+				"type": "String"
+			},
+			{
+				"name": "ITYPEINTERNATIONAL",
+				"type": "String"
+			},
+			{
+				"name": "HCOMPANY",
+				"type": "String"
+			},
+			{
+				"name": "ITYPE2",
+				"type": "String"
+			},
+			{
+				"name": "DTNCREIFINSERVICE",
+				"type": "String"
+			},
+			{
+				"name": "DSALESPRICE",
+				"type": "String"
+			},
+			{
+				"name": "ITYPECSH",
+				"type": "String"
+			},
+			{
+				"name": "HCOMMMLA",
+				"type": "String"
+			},
+			{
+				"name": "HESTATE",
+				"type": "String"
+			},
+			{
+				"name": "BESTATE",
+				"type": "String"
+			},
+			{
+				"name": "HUSERCREATEDBY",
+				"type": "String"
+			},
+			{
+				"name": "HUSERMODIFIEDBY",
+				"type": "String"
+			},
+			{
+				"name": "DTCREATED",
+				"type": "String"
+			},
+			{
+				"name": "DTLASTMODIFIED",
+				"type": "String"
+			},
+			{
+				"name": "HFOREIGNDB",
+				"type": "String"
+			},
+			{
+				"name": "SEXTREFERENCE",
+				"type": "String"
+			},
+			{
+				"name": "DTNCREIFSTOPSUBMISSION",
+				"type": "String"
+			},
+			{
+				"name": "BSITESTUFF",
+				"type": "String"
+			},
+			{
+				"name": "TROWVERSION",
+				"type": "String"
+			},
+			{
+				"name": "BRESIDENTSCREENING",
+				"type": "String"
+			},
+			{
+				"name": "DTRESIDENTSCREENINGSYNC",
+				"type": "String"
+			},
+			{
+				"name": "DTEFFECTIVE",
+				"type": "String"
+			},
+			{
+				"name": "BEXCLUDEMODELS",
+				"type": "String"
+			},
+			{
+				"name": "ITYPESTORAGE",
+				"type": "String"
+			},
+			{
+				"name": "IMKTRENTALTYPE",
+				"type": "String"
+			},
+			{
+				"name": "HINCENTIVERATEID",
+				"type": "String"
+			},
+			{
+				"name": "HMKTRECEXPPOOL",
+				"type": "String"
+			},
+			{
+				"name": "HINCTABLE",
+				"type": "String"
+			},
+			{
+				"name": "BVENDORCAFE",
+				"type": "String"
+			},
+			{
+				"name": "DTVCSYNC",
+				"type": "String"
+			},
+			{
+				"name": "HCOPYFROM",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

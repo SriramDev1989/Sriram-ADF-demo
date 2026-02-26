@@ -1,0 +1,9 @@
+{
+	"name": "reitadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ea98f130-ddcd-4516-9273-d9ef278a4d66",
+		"tenantId": "31386ae4-e5c5-4956-80b9-3868597721b3"
+	}
+}

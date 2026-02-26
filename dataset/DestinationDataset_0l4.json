@@ -1,0 +1,620 @@
+{
+	"name": "DestinationDataset_0l4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "reit_server",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Schema": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "HMY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SCODE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SADDR1",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SADDR2",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SADDR3",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SADDR4",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SCITY",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SSTATE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SZIPCODE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "ITYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BINACTIVE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HTAX",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HUSUALACCT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IENTTYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SEXTRAADDRLINE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "FSALESTAX",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ILATETYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DLATEPERCENT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SLATEMIN",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SLATEPERDAY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BCOMMTYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DCOMMAMT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SCOMMMIN",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BCOMMPOSTED",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SCOMMPOSTEDAMT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SCASHRESERVE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTMGMTDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "IENDOFYEAR",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BEXCLUDE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BACCRUAL",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BSITE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BASSOCIATION",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IPROPTYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SMAINTLIMIT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DWOCOMM",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IPORTFOLIO",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DPPRICE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPERES",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SNCREIF",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "HIDEALLEASE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IRERENT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SACQUIRE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SDISPOSE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HPAYER",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DGSTRATE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HPROPSTORAGE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HMVENDOR",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "CNSFFEE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HNSFCHGCODE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SPROPSTORATTN",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "HCOUNTRY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IPROPREPORTINGTYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTSTAMP",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SPERIOD",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "DTINACTIVE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HLEGALENTITY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SHMPROJECTTYPE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "IUNITTYPES",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPECOMMERCIAL",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPECONDO",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPESTUDENT",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPESENIOR",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPEMILITARY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPEAFFORDABLE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPEPUBLICHOUSING",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPECOOP",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPEASSOCIATION",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ISUBTYPEASSOC",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPEINTERNATIONAL",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HCOMPANY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPE2",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTNCREIFINSERVICE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DSALESPRICE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPECSH",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HCOMMMLA",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HESTATE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BESTATE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HUSERCREATEDBY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HUSERMODIFIEDBY",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTCREATED",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DTLASTMODIFIED",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HFOREIGNDB",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SEXTREFERENCE",
+				"type": "varchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "DTNCREIFSTOPSUBMISSION",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "BSITESTUFF",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "TROWVERSION",
+				"type": "varbinary",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "BRESIDENTSCREENING",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTRESIDENTSCREENINGSYNC",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DTEFFECTIVE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "BEXCLUDEMODELS",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "ITYPESTORAGE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "IMKTRENTALTYPE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HINCENTIVERATEID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HMKTRECEXPPOOL",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "HINCTABLE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "BVENDORCAFE",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "DTVCSYNC",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HCOPYFROM",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

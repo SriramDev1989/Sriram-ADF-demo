@@ -1,0 +1,161 @@
+{
+	"name": "Dim_and_Fact_load",
+	"properties": {
+		"activities": [
+			{
+				"name": "ADF Pipeline",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select * from [Config].[ADFPipeline] where isREITValid =1",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "DestinationDataset_0l4",
+						"type": "DatasetReference",
+						"parameters": {
+							"Schema": "Config",
+							"TableName": "ADFPipeline"
+						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "Executing SP",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "ADF Pipeline",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('ADF Pipeline').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "REIT_Stored_proc",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": {
+									"value": "@item().ReitStoreProcName",
+									"type": "Expression"
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "reit_server",
+								"type": "LinkedServiceReference"
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Success",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Executing SP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"url": "https://prod-27.eastus.logic.azure.com:443/workflows/2c4c34e8777249cb94b6c28ecb084f7a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=XpR9EBmt1jcq3e8j3-jnjImN33XogGiX2e6bf13Ik5A",
+					"body": {
+						"value": "{\n    \"title\": \"@{pipeline().Pipeline} Pipeline run successfully completed in @{pipeline().DataFactory}\",\n    \"message\": \"Pipeline run Completed!\",\n    \"color\": \"Green\",\n    \"dataFactoryName\": \"@{pipeline().DataFactory}\",\n    \"pipelineName\": \"@{pipeline().Pipeline}\",\n    \"pipelineRunId\": \"@{pipeline().RunId}\",\n    \"time\": \"@{utcnow()}\",\n}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Fail",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Executing SP",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"url": "https://prod-27.eastus.logic.azure.com:443/workflows/2c4c34e8777249cb94b6c28ecb084f7a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=XpR9EBmt1jcq3e8j3-jnjImN33XogGiX2e6bf13Ik5A",
+					"body": {
+						"value": "{\n    \"title\": \"@{pipeline().Pipeline} Pipeline run failed in @{pipeline().DataFactory}\",\n    \"message\": \"Pipeline run failed!\",\n    \"color\": \"red\",\n    \"dataFactoryName\": \"@{pipeline().DataFactory}\",\n    \"pipelineName\": \"@{pipeline().Pipeline}\",\n    \"pipelineRunId\": \"@{pipeline().RunId}\",\n    \"time\": \"@{utcnow()}\",\n}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"Container": {
+				"type": "string",
+				"defaultValue": "reit"
+			},
+			"Directory": {
+				"type": "string",
+				"defaultValue": "Stored Proc"
+			},
+			"FileName": {
+				"type": "string",
+				"defaultValue": "StoredProc_Name.csv"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-12-13T17:23:09Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
